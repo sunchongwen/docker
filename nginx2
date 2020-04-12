@@ -27,7 +27,48 @@ cd nginx-1.16.1
      
      weget https://imcfile.oss-cn-beijing.aliyuncs.com/shizhan/file/392/dist.zipmv 
      mv ./dist/* .
-     
-     
-   
+   -------------------------------------------  
+     network 
+     refresh 
+     xhr
+     404
+  ------------------------------------------------------
   
+  yum install docker
+  systemctl start docker 启动docker
+  docker run -d -p 6379:6379 redis:5.0.7
+  
+  docker ps
+  
+  docker run -d -p 5672:5672 -p 15672:15672 registry.cn-shanghai.aliyuncs.com/springcloud-imooc/rabbitmq:3.8.2-management
+  
+  安全组
+  
+  tcp 15672  0.0.0.0/0
+  
+  guest guest  payNotify
+  
+  
+  jdk
+  
+  cd  
+  回到根目录
+  https://imcfile.oss-cn-beijing.aliyuncs.com/shizhan/file/liaoshixiong/jdk-8u231-linux-x64.tar.gz
+  
+  tar -zxvf jdk-8u231-linux-x64.tar.gz
+   mv jdk1.8.0_231/ /usr/local/
+   根目录下才有
+   cd
+   
+   vim .bash_profile
+   JAVA_HOME=/usr/local/jdk1.8.0_231
+  PATH=$PATH:$JAVA_HOME/bin
+  
+  source .bash_profile
+  
+  docker search mysql
+  docker pull mysql:5.7
+  
+  docker run --name "mysql" -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 -d mysql:5.7
+  
+  docker exec -it mysql /bin/bash
