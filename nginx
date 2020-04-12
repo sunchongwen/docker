@@ -1,4 +1,5 @@
 docker ps -a  查看所有容器
-
+docker start 562bbd7cf937 
+docker kill 8cd0aea19d98 
 docker rm cb915f772943 
 docker run -d -p 90:80 --name nginx2 nginx
