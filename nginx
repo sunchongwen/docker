@@ -1,1 +1,2 @@
+docker ps -a  查看所有容器
 docker run -d -p 90:80 --name nginx2 nginx
