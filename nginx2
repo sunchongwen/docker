@@ -3,7 +3,12 @@ wget https://imcfile.oss-cn-beijing.aliyuncs.com/shizhan/file/liaoshixiong/nginx
 tar -zxvf ./nginx-1.16.1.tar.gz  
 
 cd nginx-1.16.1
+一般出现这个-bash: make: command not found提示，是因为安装系统的时候使用的是最小化mini安装，系统没有安装make、vim等常用命令，直接yum安装下即可。
 
+yum -y install gcc automake autoconf libtool make
+————————————————
+版权声明：本文为CSDN博主「IMezZ」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/qq_36249352/java/article/details/79961798
  yum -y install gcc-c++
  yum install unzip
  ./configure --prefix=/usr/local/nginx
